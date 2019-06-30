@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#A41D21</color>
+    <color name="colorPrimaryDark">#A41D21</color>
+    <color name="colorAccent">#FFFFFF</color>
+
+    <color name="silver_color">#EAC038</color>
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_index"
+    tools:context=".fragments.ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/profile_userName_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/white">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/profile_userName_ed_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:drawableRight="@drawable/user6"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/userName"
+                    android:inputType="text"
+                    android:textColor="@android:color/white" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/profile_email_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/white">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/profile_register_email_ed_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:drawableRight="@drawable/email4"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@android:color/white" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/profile_phone_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/white">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/profile_phone_ed_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:drawableRight="@drawable/phone3"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/phone"
+                    android:inputType="numberSigned"
+                    android:textColor="@android:color/white" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/profile_identityNum_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/white">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/profile_identityNum_ed_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:drawableRight="@drawable/bullding2"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/identityNum"
+                    android:inputType="numberSigned"
+                    android:textColor="@android:color/white" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/profile_password_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:textColorHint="@android:color/white">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/profile_pass_ed_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:drawableRight="@drawable/password4"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/password"
+                    android:inputType="numberSigned"
+                    android:textColor="@android:color/white" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/profile_changePass_txtV_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/change"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/profile_update_btn_id"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_background"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/save"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/send_msg_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/send_tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="end"
+            android:paddingRight="10dp"
+            android:text="12:20 AM"
+            android:textColor="@android:color/white"
+            android:textSize="11sp" />
+
+        <FrameLayout
+            android:id="@+id/send_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/sent_message">
+
+            <TextView
+                android:id="@+id/send_tv_message_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:minWidth="60dp"
+                android:text="إذا ما طمحت الى غاية .. ركبت المنى ر  "
+                android:textColor="@android:color/white" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/received_msg_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/received_tv_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="start"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:text="Ahmed"
+            android:textColor="@android:color/white"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/recevied_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/received_tv_username"
+            android:layout_gravity="start"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/received_message">
+
+            <TextView
+                android:id="@+id/received_tv_message_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:layout_marginTop="1dp"
+                android:gravity="center"
+                android:minWidth="60dp"
+                android:text=" مرحبا "
+                android:textColor="@android:color/white" />
+
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/received_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/container"
+            android:layout_alignEnd="@id/container"
+            android:layout_alignRight="@id/container"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="end"
+            android:paddingLeft="10dp"
+            android:text="12:20 AM"
+            android:textColor="@android:color/white"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+</LinearLayout>

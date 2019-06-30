@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.routehelperr">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activities.FindService"></activity>
+        <activity
+            android:name=".activities.UserLocation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EmployerRegisteration"
+            android:screenOrientation="portrait" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDwXPJ7mHQLsVl6znY4XgOM1d9aBa0i_uA" />
+
+        <activity android:name=".activities.MemberScreen" />
+        <activity
+            android:name=".activities.ChangeLang"
+            android:screenOrientation="portrait" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.geo.API_KEY" -->
+        <!-- android:value="@string/google_maps_key" /> -->
+        <activity
+            android:name=".activities.Chat"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.RegisterAsEmployer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.OrderServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EmployerActivitate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MyNotificatios"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.Chatters"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ContactUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PaymentMethod"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MyAccount"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.RouteServiceDetails" />
+        <activity
+            android:name=".activities.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.SelectBaqqa"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ChangePassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SendCode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ForgetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.HelpScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PrivacyPolicy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AboutUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.Register"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.LogIn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- ###  listener service listen to firebase messages ### -->
+        <service
+            android:name=".MyFCMService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- ###  Register service get token and send it to service  ### -->
+        <service android:name=".FCMRegistrationService" />
+    </application>
+
+</manifest>

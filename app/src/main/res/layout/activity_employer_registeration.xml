@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_index"
+    tools:context=".activities.EmployerRegisteration">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        *
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/registerPage_logo_imageV"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="@id/content_layout_id"
+                app:layout_constraintStart_toStartOf="@id/content_layout_id"
+                app:layout_constraintTop_toTopOf="@id/content_layout_id" />
+
+            <TextView
+                android:id="@+id/subscribe_txtV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/subscribe"
+                android:textColor="@android:color/white"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/content_layout_id"
+                app:layout_constraintStart_toStartOf="@id/content_layout_id"
+                app:layout_constraintTop_toBottomOf="@id/registerPage_logo_imageV" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/content_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/fullName_layout_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="@id/content_layout_id"
+                    app:layout_constraintStart_toStartOf="@id/content_layout_id"
+                    app:layout_constraintTop_toTopOf="@id/content_layout_id">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/fullName_ed_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:drawableStart="@drawable/user6"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/fullName"
+                        android:inputType="text"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_email_layout_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="@id/fullName_layout_id"
+                    app:layout_constraintStart_toStartOf="@id/fullName_layout_id"
+                    app:layout_constraintTop_toBottomOf="@id/fullName_layout_id">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_email_ed_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:drawableStart="@drawable/email4"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_phone_layout_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textColorHint="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="@id/fullName_layout_id"
+                    app:layout_constraintStart_toEndOf="@id/countryCode_spinner"
+                    app:layout_constraintTop_toBottomOf="@+id/register_email_layout_id">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/phone_ed_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:drawableStart="@drawable/phone3"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="@string/phone"
+                        android:inputType="numberSigned"
+                        android:maxLength="10"
+                        android:textColor="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.isapanah.awesomespinner.AwesomeSpinner
+                    android:id="@+id/countryCode_spinner"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="@id/register_phone_layout_id"
+                    app:layout_constraintStart_toStartOf="@id/fullName_layout_id"
+                    app:layout_constraintTop_toTopOf="@id/register_phone_layout_id"
+                    app:spinnerDirection="rtl" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_identityNum_layout_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="@id/fullName_layout_id"
+                    app:layout_constraintStart_toStartOf="@id/fullName_layout_id"
+                    app:layout_constraintTop_toBottomOf="@+id/register_phone_layout_id">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/identityNum_ed_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:drawableStart="@drawable/bullding2"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/identityNum"
+                        android:inputType="numberSigned"
+                        android:maxLength="15"
+                        android:textColor="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_polisaNum_layout_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textColorHint="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="@id/fullName_layout_id"
+                    app:layout_constraintStart_toStartOf="@id/fullName_layout_id"
+                    app:layout_constraintTop_toBottomOf="@+id/register_identityNum_layout_id">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/polisaNum_ed_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:drawableStart="@drawable/password4"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/employer_code"
+                        android:inputType="numberSigned"
+                        android:maxLength="15"
+                        android:textColor="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_password_layout_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="@id/fullName_layout_id"
+                    app:layout_constraintStart_toStartOf="@id/fullName_layout_id"
+                    app:layout_constraintTop_toBottomOf="@+id/register_polisaNum_layout_id"
+                    app:passwordToggleContentDescription="@string/description"
+                    app:passwordToggleDrawable="@drawable/ic_visibility_black_24dp"
+                    app:passwordToggleEnabled="false"
+                    app:passwordToggleTint="@android:color/white">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_password_ed_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:drawableStart="@drawable/password4"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:textColor="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/about_car_info_txtV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/about_car_info"
+                    android:textColor="@color/silver_color"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@id/fullName_layout_id"
+                    app:layout_constraintStart_toStartOf="@id/fullName_layout_id"
+                    app:layout_constraintTop_toBottomOf="@id/register_password_layout_id" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_carNum_layout_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textColorHint="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="@id/fullName_layout_id"
+                    app:layout_constraintStart_toStartOf="@id/fullName_layout_id"
+                    app:layout_constraintTop_toBottomOf="@id/about_car_info_txtV">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/carNum_ed_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:ems="8"
+                        android:hint="@string/car_Num"
+                        android:inputType="numberSigned"
+                        android:maxLength="8"
+                        android:textColor="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_carModel_layout_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@android:color/white"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/fullName_layout_id"
+                    app:layout_constraintStart_toStartOf="@id/fullName_layout_id"
+                    app:layout_constraintTop_toBottomOf="@+id/register_carNum_layout_id">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/carModel_ed_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:hint="@string/car_Model"
+                        android:inputType="numberSigned"
+                        android:textColor="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.isapanah.awesomespinner.AwesomeSpinner
+                    android:id="@+id/modal_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@id/fullName_layout_id"
+                    app:layout_constraintStart_toStartOf="@id/fullName_layout_id"
+                    app:layout_constraintTop_toBottomOf="@id/register_carNum_layout_id"
+                    app:spinnerDirection="rtl" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_carType_layout_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="@id/fullName_layout_id"
+                    app:layout_constraintStart_toStartOf="@id/fullName_layout_id"
+                    app:layout_constraintTop_toBottomOf="@id/modal_spinner">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/carType_ed_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:ems="15"
+                        android:hint="@string/car_Type"
+                        android:inputType="text"
+                        android:maxLength="15"
+                        android:textColor="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/employer_location_layout_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/fullName_layout_id"
+                    app:layout_constraintStart_toStartOf="@id/fullName_layout_id"
+                    app:layout_constraintTop_toBottomOf="@id/register_carType_layout_id">
+
+                    <ImageView
+                        android:id="@+id/location_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_location_on_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/detect_location_txt_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="@string/detect_location"
+                        android:textColor="@color/silver_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/as_user_layout_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/fullName_layout_id"
+                app:layout_constraintStart_toStartOf="@id/fullName_layout_id"
+                app:layout_constraintTop_toBottomOf="@id/register_carType_layout_id">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/select_baqqa_txtV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/select_baqqa"
+                    android:textColor="@color/silver_color"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/rg_layout_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioGroup
+                        android:id="@+id/radio_group_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <RadioButton
+                            android:id="@+id/silverBaqqa_btn_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:onClick="onRadioBaqqaClicked"
+                            android:text="@string/silver_baqqa"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/goldBaqqa_btn_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:onClick="onRadioBaqqaClicked"
+                            android:text="@string/gold_baqqa"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/baqqaBositives_txtV_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="المميزات"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_discountCode_layout_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@android:color/white">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/discountCode_ed_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:drawableStart="@drawable/code"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/descount_code"
+                        android:inputType="numberSigned"
+                        android:textColor="@android:color/white" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/baqqaVal_txtV_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="250"
+                    android:textColor="@color/silver_color"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/currency_txtV_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/ryal"
+                    android:textColor="@color/silver_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/register_btn_id"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_background"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/continu"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/have_an_account"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/logIn_txtV_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:text="@string/login_now"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

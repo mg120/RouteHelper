@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:padding="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/call_center_image_id"
+        android:layout_width="87dp"
+        android:layout_height="95dp"
+        android:src="@drawable/call_center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/call_canter_name_txtV_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/call_center_image_id"
+        app:layout_constraintTop_toTopOf="@id/call_center_image_id" />
+
+    <TextView
+        android:id="@+id/help_item_title_txtV_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="5dp"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:maxLines="3"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/phone_icon_imageV"
+        app:layout_constraintStart_toStartOf="@id/call_canter_name_txtV_id"
+        app:layout_constraintTop_toBottomOf="@id/call_canter_name_txtV_id" />
+
+    <TextView
+        android:id="@+id/call_center_num_txtV_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="5dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="3"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/phone_icon_imageV"
+        app:layout_constraintStart_toStartOf="@id/call_canter_name_txtV_id"
+        app:layout_constraintTop_toBottomOf="@id/help_item_title_txtV_id" />
+
+    <ImageView
+        android:id="@+id/phone_icon_imageV"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="7dp"
+        android:src="@drawable/phone2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/call_center_image_id" />
+</android.support.constraint.ConstraintLayout>

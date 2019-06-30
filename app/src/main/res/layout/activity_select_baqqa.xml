@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_index"
+    tools:context=".activities.SelectBaqqa">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/baqqa_toolBar_id"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/Base.Theme.AppCompat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/select_baqqa"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/baqqa_back_txtV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_arrow_right_black_24dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/baqqa_tabLayout_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/baqqa_toolBar_id"
+        app:layout_constraintStart_toStartOf="@id/baqqa_toolBar_id"
+        app:layout_constraintTop_toBottomOf="@id/baqqa_toolBar_id"
+        app:tabIndicatorColor="@color/silver_color"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/silver_color"
+        app:tabTextAppearance="?android:attr/textAppearanceLarge"
+        app:tabTextColor="@android:color/darker_gray">
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/goldBaqqa_tab_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/gold_baqqa" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/silverBaqqa_tab_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/silver_baqqa" />
+
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/baqqa_viewPager_id"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/baqqa_toolBar_id"
+        app:layout_constraintStart_toStartOf="@id/baqqa_toolBar_id"
+        app:layout_constraintTop_toBottomOf="@id/baqqa_tabLayout_id" />
+
+</android.support.constraint.ConstraintLayout>
